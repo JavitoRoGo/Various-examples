@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Automovil" representedClassName="Automovil" syncable="YES">
+        <attribute name="busqueda" optional="YES" attributeType="String"/>
+        <attribute name="calificacion" optional="YES" attributeType="Double" minValueString="0" maxValueString="5" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="datosImagen" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String"/>
+        <attribute name="ultimaPrueba" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="vecesProbado" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Automovil" positionX="-63" positionY="-18" width="128" height="119"/>
+    </elements>
+</model>
