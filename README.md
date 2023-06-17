@@ -9,6 +9,7 @@ Incluye los siguientes proyectos:
 * **_WatchConnectivityExample_**: implementación en UIKit de WatchConnectivity y comunicar el iPhone con Watch.
 * **_WatchConnectivityExampleUI_**: implementación en SwiftUI de WatchConnectivity y comunicar el iPhone con Watch.
 * **_WidgetExample_**: creación de widget en varios tamaños.
+* **_MyFirstRealityKitApp_**: uso de RealityKit y RealityComposer para añadir un objeto virtual usando la cámara.
 
 #
 
@@ -22,3 +23,4 @@ This repository includes the following:
 * **_WatchConnectivityExample_**: WatchConnectivity implementation using UIKit.
 * **_WatchConnectivityExampleUI_**: WatchConnectivity implementation using SwiftUI.
 * **_WidgetExample_**: building a widget with different sizes.
+* **_MyFirstRealityKitApp_**: using RealityKit and RealityComposer to add a virtual object using the camera.
