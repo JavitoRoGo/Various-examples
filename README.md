@@ -10,6 +10,7 @@ Incluye los siguientes proyectos:
 * **_WatchConnectivityExampleUI_**: implementación en SwiftUI de WatchConnectivity y comunicar el iPhone con Watch.
 * **_WidgetExample_**: creación de widget en varios tamaños.
 * **_MyFirstRealityKitApp_**: uso de RealityKit y RealityComposer para añadir un objeto virtual usando la cámara.
+* **_AnimatedSymbolsExample_**: diferentes animaciones de SF Symbols usando la beta de Xcode 15 y iOS 17.
 
 #
 
@@ -24,3 +25,4 @@ This repository includes the following:
 * **_WatchConnectivityExampleUI_**: WatchConnectivity implementation using SwiftUI.
 * **_WidgetExample_**: building a widget with different sizes.
 * **_MyFirstRealityKitApp_**: using RealityKit and RealityComposer to add a virtual object using the camera.
+* **_AnimatedSymbolsExample_**: different SF Symbols animations using Xcode 15 and iOS 17 betas.
