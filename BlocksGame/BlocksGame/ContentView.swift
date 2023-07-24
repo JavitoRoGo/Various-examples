@@ -13,7 +13,6 @@ struct ContentView: View {
     
     let boxSize: CGFloat = 20.0
     let spacing: CGFloat = 2.0
-    let color = Color.gray.opacity(0.2)
     
     var body: some View {
         VStack {
@@ -26,6 +25,9 @@ struct ContentView: View {
                 Spacer()
             }
             Spacer()
+            controls
+                .padding(.horizontal)
+                .padding(.bottom, 20)
         }
         .ignoresSafeArea()
         .background(.black)
@@ -36,6 +38,9 @@ struct ContentView: View {
             ForEach(0..<viewModel.height, id: \.self) { y in
                 HStack(spacing: spacing) {
                     ForEach(0..<viewModel.width, id: \.self) { x in
+                        let squareGame = viewModel.getSquareGame(x: x, y: y)
+                        let color = squareGame?.color ?? Color.gray.opacity(0.2)
+                        
                         Rectangle()
                             .aspectRatio(1.0, contentMode: .fit)
                             .foregroundColor(color)
@@ -45,6 +50,23 @@ struct ContentView: View {
                 }
             }
         }
+    }
+    
+    var controls: some View {
+        HStack(spacing: 20) {
+            ButtonView(iconSystemName: IconButtons.icons.arrowback) {
+                viewModel.moveLeft()
+            }
+            ButtonView(iconSystemName: IconButtons.icons.arrowforward) {
+                viewModel.moveRight()
+            }
+            Spacer()
+            ButtonView(iconSystemName: IconButtons.icons.rotateright) {
+                viewModel.rotateShape()
+            }
+        }
+        .padding(.horizontal, 10)
+        .padding(.bottom, 30)
     }
 }
 
