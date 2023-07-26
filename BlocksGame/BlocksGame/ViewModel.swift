@@ -55,18 +55,56 @@ final class ViewModel: ObservableObject {
     
     func moveDown() {
         activeShape?.moveDown()
+        
+        if let shape = activeShape, !isInvalidPosition(shape: shape) {
+            activeShape?.moveUp()
+            if isOverLimit(shape: activeShape!) {
+                return
+            }
+            
+            landShape()
+        }
+    }
+    
+    func landShape() {
+        if let activeShape {
+            storeShapeInGrid(shape: activeShape)
+            
+            let cleared = clearAllRows()
+        }
+    }
+    
+    func storeShapeInGrid(shape: Shape) {
+        if isInvalidPosition(shape: shape) {
+            for position in shape.occupiedPositions {
+                boardMatrix[position.y][position.x] = SquareGame(x: position.x, y: position.y, occupied: true, color: shape.color)
+            }
+        }
+        activeShape = createRandomShape()
     }
     
     func moveLeft() {
         activeShape?.moveLeft()
+        
+        if let shape = activeShape, !isInvalidPosition(shape: shape) {
+            activeShape?.moveRight()
+        }
     }
     
     func moveRight() {
         activeShape?.moveRight()
+        
+        if let shape = activeShape, !isInvalidPosition(shape: shape) {
+            activeShape?.moveLeft()
+        }
     }
     
     func rotateShape() {
-        activeShape?.rotateToRight()
+        activeShape?.rotateToLeft()
+        
+        if let shape = activeShape, !isInvalidPosition(shape: shape) {
+            activeShape?.rotateToRight()
+        }
     }
     
     func createRandomShape() -> Shape {
@@ -81,6 +119,91 @@ final class ViewModel: ObservableObject {
         case 5: return SShape()
         case 6: return ZShape()
         default: return OShape()
+        }
+    }
+    
+    func isInvalidPosition(shape: Shape) -> Bool {
+        for position in shape.occupiedPositions {
+            if !isWithInBoard(x: position.x, y: position.y) {
+                return false
+            }
+            if isOccupied(x: position.x, y: position.y) {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func isWithInBoard(x: Int, y: Int) -> Bool {
+        if x < width, y < height, x >= 0 {
+            return true
+        }
+        return false
+    }
+    
+    func isOccupied(x: Int, y: Int) -> Bool {
+        if let squareGame = getSquareBoard(x: x, y: y), squareGame.occupied {
+            return true
+        }
+        return false
+    }
+    
+    private func getSquareBoard(x: Int, y: Int) -> SquareGame? {
+        if y >= 0, x >= 0, y < height, x < width {
+            return boardMatrix[y][x]
+        } else {
+            return nil
+        }
+    }
+    
+    func isOverLimit(shape: Shape) -> Bool {
+        for position in shape.occupiedPositions {
+            if position.y <= -1 || position.y >= height {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func clearAllRows() -> Int {
+        var cleared = 0
+        for (index, item) in boardMatrix.enumerated() {
+            if isRowComplete(y: index) {
+                clearRow(y: index)
+                shiftRowsDown(end: index)
+                
+                cleared += 1
+            }
+        }
+        return cleared
+    }
+    
+    func isRowComplete(y: Int) -> Bool {
+        boardMatrix[y].filter { squaregame in
+            squaregame == nil || squaregame?.occupied == false
+        }.count == 0
+    }
+    
+    func clearRow(y: Int) {
+        for index in boardMatrix[y].indices {
+            boardMatrix[y][index] = nil
+        }
+    }
+    
+    func shiftRowsDown(end: Int) {
+        for index in (0..<end).reversed() {
+            shiftOneRowDown(y: index)
+        }
+    }
+    
+    func shiftOneRowDown(y: Int) {
+        for index in boardMatrix[y].indices {
+            if let squaregame = boardMatrix[y][index] {
+                boardMatrix[y + 1][index] = SquareGame(x: squaregame.x, y: squaregame.y, occupied: squaregame.occupied, color: squaregame.color)
+            } else {
+                boardMatrix[y + 1][index] = nil
+            }
+            boardMatrix[y][index] = nil
         }
     }
 }
