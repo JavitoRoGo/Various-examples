@@ -23,6 +23,12 @@
 		4442470F2A6EDBA00006502D /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4442470E2A6EDBA00006502D /* SShape.swift */; };
 		444247112A6EDBDC0006502D /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444247102A6EDBDC0006502D /* ZShape.swift */; };
 		444247132A6EE1430006502D /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444247122A6EE1430006502D /* ButtonView.swift */; };
+		44CA18F12A8557E900E9786A /* DS-DIGIB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 44CA18EC2A8557E800E9786A /* DS-DIGIB.TTF */; };
+		44CA18F22A8557E900E9786A /* DS-DIGI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 44CA18ED2A8557E800E9786A /* DS-DIGI.TTF */; };
+		44CA18F32A8557E900E9786A /* DIGITAL.TXT in Resources */ = {isa = PBXBuildFile; fileRef = 44CA18EE2A8557E800E9786A /* DIGITAL.TXT */; };
+		44CA18F42A8557E900E9786A /* DS-DIGII.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 44CA18EF2A8557E900E9786A /* DS-DIGII.TTF */; };
+		44CA18F52A8557E900E9786A /* DS-DIGIT.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 44CA18F02A8557E900E9786A /* DS-DIGIT.TTF */; };
+		44CA18F82A8558E500E9786A /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA18F72A8558E500E9786A /* TextExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +49,13 @@
 		4442470E2A6EDBA00006502D /* SShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
 		444247102A6EDBDC0006502D /* ZShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
 		444247122A6EE1430006502D /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		44CA18EC2A8557E800E9786A /* DS-DIGIB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGIB.TTF"; sourceTree = "<group>"; };
+		44CA18ED2A8557E800E9786A /* DS-DIGI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGI.TTF"; sourceTree = "<group>"; };
+		44CA18EE2A8557E800E9786A /* DIGITAL.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DIGITAL.TXT; sourceTree = "<group>"; };
+		44CA18EF2A8557E900E9786A /* DS-DIGII.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGII.TTF"; sourceTree = "<group>"; };
+		44CA18F02A8557E900E9786A /* DS-DIGIT.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGIT.TTF"; sourceTree = "<group>"; };
+		44CA18F62A85583C00E9786A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		44CA18F72A8558E500E9786A /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +88,8 @@
 		443D10272A6DE54E000DC308 /* BlocksGame */ = {
 			isa = PBXGroup;
 			children = (
+				44CA18F62A85583C00E9786A /* Info.plist */,
+				44CA18EA2A8557A000E9786A /* Resources */,
 				443D10282A6DE54E000DC308 /* BlocksGameApp.swift */,
 				443D102A2A6DE54E000DC308 /* ContentView.swift */,
 				444247122A6EE1430006502D /* ButtonView.swift */,
@@ -109,6 +124,27 @@
 				443D103C2A6DEDA1000DC308 /* GridPosition.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		44CA18EA2A8557A000E9786A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				44CA18EB2A8557AD00E9786A /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		44CA18EB2A8557AD00E9786A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				44CA18EE2A8557E800E9786A /* DIGITAL.TXT */,
+				44CA18ED2A8557E800E9786A /* DS-DIGI.TTF */,
+				44CA18EC2A8557E800E9786A /* DS-DIGIB.TTF */,
+				44CA18EF2A8557E900E9786A /* DS-DIGII.TTF */,
+				44CA18F02A8557E900E9786A /* DS-DIGIT.TTF */,
+				44CA18F72A8558E500E9786A /* TextExtension.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +205,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44CA18F32A8557E900E9786A /* DIGITAL.TXT in Resources */,
+				44CA18F22A8557E900E9786A /* DS-DIGI.TTF in Resources */,
 				443D10302A6DE550000DC308 /* Preview Assets.xcassets in Resources */,
+				44CA18F12A8557E900E9786A /* DS-DIGIB.TTF in Resources */,
+				44CA18F42A8557E900E9786A /* DS-DIGII.TTF in Resources */,
 				443D102D2A6DE550000DC308 /* Assets.xcassets in Resources */,
+				44CA18F52A8557E900E9786A /* DS-DIGIT.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +229,7 @@
 				443D102B2A6DE54E000DC308 /* ContentView.swift in Sources */,
 				444247042A6ECF810006502D /* OShape.swift in Sources */,
 				444247132A6EE1430006502D /* ButtonView.swift in Sources */,
+				44CA18F82A8558E500E9786A /* TextExtension.swift in Sources */,
 				443D103D2A6DEDA1000DC308 /* GridPosition.swift in Sources */,
 				4442470F2A6EDBA00006502D /* SShape.swift in Sources */,
 				443D10372A6DE837000DC308 /* ViewModel.swift in Sources */,
@@ -325,6 +367,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BlocksGame/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlocksGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -353,6 +396,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BlocksGame/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlocksGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
