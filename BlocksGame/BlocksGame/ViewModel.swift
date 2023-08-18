@@ -22,6 +22,7 @@ final class ViewModel: ObservableObject {
     
     @Published var boardMatrix: [[SquareGame?]]
     @Published var activeShape: Shape? = nil
+	@Published var nextActiveShape: Shape? = nil
     
     var timer = Timer.publish(every: 0.5, on: .main, in: .common)
     var cancellableSet: Set<AnyCancellable> = []
@@ -31,6 +32,7 @@ final class ViewModel: ObservableObject {
         
         if activeShape == nil {
             activeShape = createRandomShape()
+			nextActiveShape = createRandomShape()
         }
         
         timer
@@ -97,7 +99,8 @@ final class ViewModel: ObservableObject {
                 boardMatrix[position.y][position.x] = SquareGame(x: position.x, y: position.y, occupied: true, color: shape.color)
             }
         }
-        activeShape = createRandomShape()
+        activeShape = nextActiveShape
+		nextActiveShape = createRandomShape()
     }
     
     func moveLeft() {
