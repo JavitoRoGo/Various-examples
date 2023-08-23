@@ -11,6 +11,11 @@
 		44A7CD782A9664FB00B21401 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD772A9664FB00B21401 /* ContentView.swift */; };
 		44A7CD7A2A9664FC00B21401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A7CD792A9664FC00B21401 /* Assets.xcassets */; };
 		44A7CD7D2A9664FC00B21401 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A7CD7C2A9664FC00B21401 /* Preview Assets.xcassets */; };
+		44A7CD842A966C7E00B21401 /* BeActiveTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD832A966C7E00B21401 /* BeActiveTabView.swift */; };
+		44A7CD862A966D5600B21401 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD852A966D5600B21401 /* HomeView.swift */; };
+		44A7CD882A966DBE00B21401 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD872A966DBE00B21401 /* ActivityCard.swift */; };
+		44A7CD8A2A967C1F00B21401 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD892A967C1F00B21401 /* HealthManager.swift */; };
+		44A7CD8D2A967F6200B21401 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD8C2A967F6200B21401 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,12 @@
 		44A7CD772A9664FB00B21401 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		44A7CD792A9664FC00B21401 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44A7CD7C2A9664FC00B21401 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		44A7CD832A966C7E00B21401 /* BeActiveTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeActiveTabView.swift; sourceTree = "<group>"; };
+		44A7CD852A966D5600B21401 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		44A7CD872A966DBE00B21401 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		44A7CD892A967C1F00B21401 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		44A7CD8B2A967E1900B21401 /* HealthKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitExample.entitlements; sourceTree = "<group>"; };
+		44A7CD8C2A967F6200B21401 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +62,14 @@
 		44A7CD742A9664FB00B21401 /* HealthKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				44A7CD8B2A967E1900B21401 /* HealthKitExample.entitlements */,
 				44A7CD752A9664FB00B21401 /* HealthKitExampleApp.swift */,
 				44A7CD772A9664FB00B21401 /* ContentView.swift */,
+				44A7CD832A966C7E00B21401 /* BeActiveTabView.swift */,
+				44A7CD852A966D5600B21401 /* HomeView.swift */,
+				44A7CD872A966DBE00B21401 /* ActivityCard.swift */,
+				44A7CD892A967C1F00B21401 /* HealthManager.swift */,
+				44A7CD8C2A967F6200B21401 /* Model.swift */,
 				44A7CD792A9664FC00B21401 /* Assets.xcassets */,
 				44A7CD7B2A9664FC00B21401 /* Preview Content */,
 			);
@@ -137,8 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44A7CD8D2A967F6200B21401 /* Model.swift in Sources */,
 				44A7CD782A9664FB00B21401 /* ContentView.swift in Sources */,
+				44A7CD8A2A967C1F00B21401 /* HealthManager.swift in Sources */,
+				44A7CD862A966D5600B21401 /* HomeView.swift in Sources */,
+				44A7CD842A966C7E00B21401 /* BeActiveTabView.swift in Sources */,
 				44A7CD762A9664FB00B21401 /* HealthKitExampleApp.swift in Sources */,
+				44A7CD882A966DBE00B21401 /* ActivityCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,11 +286,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthKitExample/HealthKitExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthKitExample/Preview Content\"";
+				DEVELOPMENT_TEAM = CHK25YBYJC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access to enjoy all the features of the application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -281,9 +306,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JRG79.HealthKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -292,11 +320,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthKitExample/HealthKitExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthKitExample/Preview Content\"";
+				DEVELOPMENT_TEAM = CHK25YBYJC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access to enjoy all the features of the application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,9 +340,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JRG79.HealthKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

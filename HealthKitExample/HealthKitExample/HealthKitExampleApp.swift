@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct HealthKitExampleApp: App {
+	@StateObject var manager = HealthManger()
+	
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BeActiveTabView()
+				.environmentObject(manager)
         }
     }
 }
