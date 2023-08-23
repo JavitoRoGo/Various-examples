@@ -11,7 +11,8 @@ Incluye los siguientes proyectos:
 * **_WidgetExample_**: creación de widget en varios tamaños.
 * **_MyFirstRealityKitApp_**: uso de RealityKit y RealityComposer para añadir un objeto virtual usando la cámara.
 * **_AnimatedSymbolsExample_**: diferentes animaciones de SF Symbols usando la beta de Xcode 15 y iOS 17.
-* **_BlocksGame_**: juego tipo Tetris en SwiftUI siguiendo vídeo de youtube de Daniel Ferrer.
+* **_BlocksGame_**: juego tipo Tetris en SwiftUI siguiendo vídeo de youtube de [Daniel Ferrer](https://www.youtube.com/@codewithdanielferrer).
+* **_HealthKitExample_**: uso de HealthKit y SwiftUI siguiendo vídeos de youtube de [Jason Dubon](https://www.youtube.com/@jasondubon/videos).
 
 #
 
@@ -27,4 +28,5 @@ This repository includes the following:
 * **_WidgetExample_**: building a widget with different sizes.
 * **_MyFirstRealityKitApp_**: using RealityKit and RealityComposer to add a virtual object using the camera.
 * **_AnimatedSymbolsExample_**: different SF Symbols animations using Xcode 15 and iOS 17 betas.
-* **_BlocksGame_**: a game based on Tetris and developed with SwiftUI following a youtube video by Daniel Ferrer.
+* **_BlocksGame_**: a game based on Tetris and developed with SwiftUI following a youtube video by [Daniel Ferrer](https://www.youtube.com/@codewithdanielferrer).
+* **_HealthKitExample_**: using HealthKit and SwiftUI following youtube videos by [Jason Dubon](https://www.youtube.com/@jasondubon/videos).
