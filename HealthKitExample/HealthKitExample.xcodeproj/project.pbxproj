@@ -16,6 +16,7 @@
 		44A7CD882A966DBE00B21401 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD872A966DBE00B21401 /* ActivityCard.swift */; };
 		44A7CD8A2A967C1F00B21401 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD892A967C1F00B21401 /* HealthManager.swift */; };
 		44A7CD8D2A967F6200B21401 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD8C2A967F6200B21401 /* Model.swift */; };
+		44D2481E2A97ACF300125BD1 /* AnotherHealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2481D2A97ACF300125BD1 /* AnotherHealthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		44A7CD892A967C1F00B21401 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		44A7CD8B2A967E1900B21401 /* HealthKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitExample.entitlements; sourceTree = "<group>"; };
 		44A7CD8C2A967F6200B21401 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		44D2481D2A97ACF300125BD1 /* AnotherHealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherHealthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				44A7CD852A966D5600B21401 /* HomeView.swift */,
 				44A7CD872A966DBE00B21401 /* ActivityCard.swift */,
 				44A7CD892A967C1F00B21401 /* HealthManager.swift */,
+				44D2481D2A97ACF300125BD1 /* AnotherHealthManager.swift */,
 				44A7CD8C2A967F6200B21401 /* Model.swift */,
 				44A7CD792A9664FC00B21401 /* Assets.xcassets */,
 				44A7CD7B2A9664FC00B21401 /* Preview Content */,
@@ -161,6 +164,7 @@
 				44A7CD842A966C7E00B21401 /* BeActiveTabView.swift in Sources */,
 				44A7CD762A9664FB00B21401 /* HealthKitExampleApp.swift in Sources */,
 				44A7CD882A966DBE00B21401 /* ActivityCard.swift in Sources */,
+				44D2481E2A97ACF300125BD1 /* AnotherHealthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
