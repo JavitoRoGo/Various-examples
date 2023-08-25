@@ -14,11 +14,18 @@ struct BeActiveTabView: View {
     var body: some View {
 		TabView(selection: $selectedTab) {
 			HomeView()
+				.environmentObject(manager)
 				.tag("Home")
 				.tabItem {
 					Image(systemName: "house")
 				}
+			
+			ChartsView()
 				.environmentObject(manager)
+				.tag("Charts")
+				.tabItem {
+					Image(systemName: "chart.line.uptrend.xyaxis")
+				}
 			
 			ContentView()
 				.tag("Content")
@@ -32,5 +39,6 @@ struct BeActiveTabView: View {
 struct BeActiveTabView_Previews: PreviewProvider {
     static var previews: some View {
         BeActiveTabView()
+			.environmentObject(HealthManger())
     }
 }

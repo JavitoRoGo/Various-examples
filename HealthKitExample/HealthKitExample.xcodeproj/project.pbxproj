@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442BE1692A9901EC00457C3B /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442BE1682A9901EC00457C3B /* ChartsView.swift */; };
 		44A7CD762A9664FB00B21401 /* HealthKitExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD752A9664FB00B21401 /* HealthKitExampleApp.swift */; };
 		44A7CD782A9664FB00B21401 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7CD772A9664FB00B21401 /* ContentView.swift */; };
 		44A7CD7A2A9664FC00B21401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A7CD792A9664FC00B21401 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		442BE1682A9901EC00457C3B /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		44A7CD722A9664FB00B21401 /* HealthKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A7CD752A9664FB00B21401 /* HealthKitExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitExampleApp.swift; sourceTree = "<group>"; };
 		44A7CD772A9664FB00B21401 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				44A7CD832A966C7E00B21401 /* BeActiveTabView.swift */,
 				44A7CD852A966D5600B21401 /* HomeView.swift */,
 				44A7CD872A966DBE00B21401 /* ActivityCard.swift */,
+				442BE1682A9901EC00457C3B /* ChartsView.swift */,
 				44A7CD892A967C1F00B21401 /* HealthManager.swift */,
 				44D2481D2A97ACF300125BD1 /* AnotherHealthManager.swift */,
 				44A7CD8C2A967F6200B21401 /* Model.swift */,
@@ -159,6 +162,7 @@
 			files = (
 				44A7CD8D2A967F6200B21401 /* Model.swift in Sources */,
 				44A7CD782A9664FB00B21401 /* ContentView.swift in Sources */,
+				442BE1692A9901EC00457C3B /* ChartsView.swift in Sources */,
 				44A7CD8A2A967C1F00B21401 /* HealthManager.swift in Sources */,
 				44A7CD862A966D5600B21401 /* HomeView.swift in Sources */,
 				44A7CD842A966C7E00B21401 /* BeActiveTabView.swift in Sources */,
