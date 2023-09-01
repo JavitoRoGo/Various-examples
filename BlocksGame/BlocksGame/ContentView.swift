@@ -32,22 +32,27 @@ struct ContentView: View {
 	}
     
     var body: some View {
-        VStack {
-            HStack {
-                VStack {
-                    board
-                }
-                .padding(.top, 80)
-                .padding(.horizontal, 20)
-                Spacer()
-				
-				scoreboard
-            }
-            Spacer()
-            controls
-                .padding(.horizontal)
-                .padding(.bottom, 20)
-        }
+		ZStack {
+			VStack {
+				HStack {
+					VStack {
+						board
+					}
+					.padding(.top, 80)
+					.padding(.horizontal, 20)
+					Spacer()
+					
+					scoreboard
+				}
+				Spacer()
+				controls
+					.padding(.horizontal)
+					.padding(.bottom, 20)
+			}
+			if viewModel.gameIsOver {
+				gameOver
+			}
+		}
         .ignoresSafeArea()
         .background(.black)
     }
@@ -138,20 +143,53 @@ struct ContentView: View {
     
     var controls: some View {
         HStack(spacing: 20) {
-            ButtonView(iconSystemName: IconButtons.icons.arrowback) {
-                viewModel.moveLeft()
-            }
-            ButtonView(iconSystemName: IconButtons.icons.arrowforward) {
-                viewModel.moveRight()
-            }
-            Spacer()
-            ButtonView(iconSystemName: IconButtons.icons.rotateright) {
-                viewModel.rotateShape()
-            }
+			if viewModel.gameIsOver || viewModel.gameIsStopped {
+				ButtonView(iconSystemName: IconButtons.icons.restart) {
+					viewModel.restartGame()
+				}
+			} else {
+				ButtonView(iconSystemName: IconButtons.icons.arrowback) {
+					viewModel.moveLeft()
+				}
+				ButtonView(iconSystemName: IconButtons.icons.arrowforward) {
+					viewModel.moveRight()
+				}
+				Spacer()
+				ButtonView(iconSystemName: IconButtons.icons.rotateright) {
+					viewModel.rotateShape()
+				}
+			}
         }
         .padding(.horizontal, 10)
         .padding(.bottom, 30)
     }
+	
+	var gameOver: some View {
+		VStack(alignment: .center) {
+			Text("""
+				GAME OVER
+				
+				LEVEL - \(viewModel.level)
+				LINES - \(viewModel.lines)
+				SCORE - \(viewModel.score)
+				""")
+			.font(size: .s20, type: .regular)
+			.foregroundColor(.white)
+			.multilineTextAlignment(.center)
+			.padding()
+			.padding()
+			.cornerRadius(16)
+			.lineSpacing(2.2)
+			.onTapGesture {
+				viewModel.restartGame()
+			}
+		}
+		.background(
+			RoundedRectangle(cornerRadius: 4)
+				.stroke(.white, lineWidth: 2)
+				.background(Color.black.opacity(0.95).cornerRadius(4))
+		).zIndex(1)
+	}
 	
 	private func colorNextShape(x: Int, y: Int) -> Color? {
 		if let shape = viewModel.nextActiveShape,

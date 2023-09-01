@@ -23,24 +23,15 @@ final class ViewModel: ObservableObject {
     @Published var boardMatrix: [[SquareGame?]]
     @Published var activeShape: Shape? = nil
 	@Published var nextActiveShape: Shape? = nil
+	
+	@Published var gameIsOver: Bool = false
+	@Published var gameIsStopped: Bool = true
     
     var timer = Timer.publish(every: 0.5, on: .main, in: .common)
     var cancellableSet: Set<AnyCancellable> = []
     
     init() {
         boardMatrix = Array(repeating: Array(repeating: nil, count: width), count: height)
-        
-        if activeShape == nil {
-            activeShape = createRandomShape()
-			nextActiveShape = createRandomShape()
-        }
-        
-        timer
-            .autoconnect()
-            .sink { timer in
-                self.moveDown()
-            }
-            .store(in: &cancellableSet)
     }
     
     private func getSquareGameInMatrix(x: Int, y: Int) -> SquareGame? {
@@ -67,8 +58,12 @@ final class ViewModel: ObservableObject {
         activeShape?.moveDown()
         
         if let shape = activeShape, !isInvalidPosition(shape: shape) {
+			if gameIsOver || gameIsStopped {
+				return
+			}
             activeShape?.moveUp()
             if isOverLimit(shape: activeShape!) {
+				gameOver()
                 return
             }
             
@@ -255,6 +250,42 @@ final class ViewModel: ObservableObject {
 				.autoconnect().sink { timer in
 					self.moveDown()
 				}.store(in: &cancellableSet)
+		}
+	}
+	
+	func gameOver() {
+		gameIsOver = true
+		gameIsStopped = true
+		activeShape = nil
+		nextActiveShape = nil
+		
+		boardMatrix = Array(repeating: Array(repeating: nil, count: width), count: height)
+	}
+	
+	func restartGame() {
+		cancellableSet = []
+		
+		level = 1
+		lines = 0
+		score = 0
+		speed = 0.5
+		linesToLevelUp = 5
+		
+		timer
+			.autoconnect()
+			.sink { timer in
+				self.moveDown()
+			}
+			.store(in: &cancellableSet)
+		
+		gameIsOver = false
+		gameIsStopped = false
+		
+		boardMatrix = Array(repeating: Array(repeating: nil, count: width), count: height)
+		
+		if activeShape == nil {
+			activeShape = createRandomShape()
+			nextActiveShape = createRandomShape()
 		}
 	}
 }
