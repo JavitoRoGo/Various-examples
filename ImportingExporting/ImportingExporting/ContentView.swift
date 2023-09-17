@@ -55,11 +55,22 @@ struct ContentView: View {
 					case .failure(let error):
 						self.error = error
 				}
+				
+				// Otra forma de trabajar con result es con do-try-catch
+//				do {
+//					let fileUrl: URL = try result.get()
+//					guard let textFromFile = String(data: try Data(contentsOf: fileUrl), encoding: .utf8) else { return }
+//					myText = textFromFile
+//				} catch {
+//					// handle failure
+//				}
 			}
 			.fileExporter(isPresented: $isExporting, document: TextDocument(myText), contentType: .text, defaultFilename: "document.txt") { result in
 				// result contains a Result type with the URL of the selected file or an Error
 				if case .failure(let error) = result {
 					self.error = error
+				} else {
+					// handle success
 				}
 			}
 		}
