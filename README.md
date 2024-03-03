@@ -15,6 +15,7 @@ Incluye los siguientes proyectos:
 * **_HealthKitExample_**: uso de HealthKit y SwiftUI siguiendo vídeos de youtube de [Jason Dubon](https://www.youtube.com/@jasondubon/videos).
 * **_ImportingExporting_**: ejemplo de importar y exportar archivos de forma nativa en SwiftUI.
 * **_PasswordCreator_**: generador y comprobador de contraseñas en SwiftUI.
+* **_OnBoardingExample_**: ejemplo de página onboarding siguiendo el estilo de disñeo de Apple.
 
 #
 
@@ -34,3 +35,4 @@ This repository includes the following:
 * **_HealthKitExample_**: using HealthKit and SwiftUI following youtube videos by [Jason Dubon](https://www.youtube.com/@jasondubon/videos).
 * **_ImportingExporting_**: importing and exporting files with native SwiftUI code.
 * **_PasswordCreator_**: password generator and checker with SwiftUI.
+* **_OnBoardingExample_**: onboarding page example, following Apple's style.
