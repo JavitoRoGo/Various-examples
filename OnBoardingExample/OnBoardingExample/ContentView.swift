@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+	@State var viewModel: ContentViewModel
 	@State private var showOnboarding = false
 	
     var body: some View {
-		Button("contentView.showOnboarding") {
-			showOnboarding = true
-		}
-		.sheet(isPresented: $showOnboarding) {
-			OnboardingView()
-		}
+		Text("ContentView")
+			.task {
+				showOnboarding = viewModel.hasToShowOnboarding()
+			}
+			.sheet(isPresented: $showOnboarding) {
+				OnboardingView(viewModel: OnboardingViewModel(settingsRepository: UserDefaultsSettingsRepository()))
+			}
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(viewModel: ContentViewModel(settingsRepository: UserDefaultsSettingsRepository()))
 //		.environment(\.locale, .init(identifier: "es"))
 }

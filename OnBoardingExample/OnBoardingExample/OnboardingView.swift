@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
 	@Environment(\.dismiss) var dismiss
+	@State var viewModel: OnboardingViewModel
 	
     var body: some View {
 		VStack(spacing: 0) {
@@ -29,6 +30,7 @@ struct OnboardingView: View {
 			Spacer()
 			
 			Button {
+				viewModel.setOnboardingAsViewed()
 				dismiss()
 			} label: {
 				HStack {
@@ -64,10 +66,10 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView()
+	OnboardingView(viewModel: OnboardingViewModel(settingsRepository: UserDefaultsSettingsRepository()))
 }
 
 #Preview {
-	OnboardingView()
+	OnboardingView(viewModel: OnboardingViewModel(settingsRepository: UserDefaultsSettingsRepository()))
 		.environment(\.locale, .init(identifier: "es"))
 }

@@ -18,6 +18,22 @@
         }
       }
     },
+    "ContentView" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ContentView"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ContentView"
+          }
+        }
+      }
+    },
     "contentView.showOnboarding" : {
       "extractionState" : "manual",
       "localizations" : {
