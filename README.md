@@ -16,6 +16,7 @@ Incluye los siguientes proyectos:
 * **_ImportingExporting_**: ejemplo de importar y exportar archivos de forma nativa en SwiftUI.
 * **_PasswordCreator_**: generador y comprobador de contraseñas en SwiftUI.
 * **_OnBoardingExample_**: ejemplo de página onboarding siguiendo el estilo de disñeo de Apple.
+* **_CustomEnvironmentValues_**: crear una variable de entorno propia y modificador para su uso más sencillo.
 
 #
 
@@ -36,3 +37,5 @@ This repository includes the following:
 * **_ImportingExporting_**: importing and exporting files with native SwiftUI code.
 * **_PasswordCreator_**: password generator and checker with SwiftUI.
 * **_OnBoardingExample_**: onboarding page example, following Apple's style.
+* **_CustomEnvironmentValues_**: custom environment value and its modifier to easily use it.
+
